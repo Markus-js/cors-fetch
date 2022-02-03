@@ -6,6 +6,9 @@ async function getData() {
     const data = await response.json();
     console.log(data);
   } catch (error) {
+    // Fix => json position 0;
+    getData();
+    //
     console.log("whoops, something went wrong!", error);
   }
 }
